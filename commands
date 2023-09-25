@@ -1,0 +1,827 @@
+# Bash Scripting
+
+# Bash Scripting
+
+Bash scripting is the process of creating scripts using the Bash shell. Bash scripts are used to automate repetitive tasks, run commands, and perform various other functions. In this article, we will discuss the basics of Bash scripting with examples.
+
+## Creating a Bash Script
+
+To create a Bash script, you need to open a text editor and create a new file with a `.sh` extension. For example, you can create a script called `myscript.sh`. Here's an example of a simple Bash script that prints "Hello, World!" when executed:
+
+```
+#!/bin/bash
+echo "Hello, World!"
+
+```
+
+In this script, `#!/bin/bash` is called the "shebang". It tells the system which interpreter to use to execute the script. In this case, we are using the Bash interpreter. The `echo` command is used to print "Hello, World!" to the console.
+
+## Running a Bash Script
+
+To run the script, you need to make it executable. You can do this by running the following command in the terminal:
+
+```
+chmod +x myscript.sh
+
+```
+
+This command sets the execute permission on the file.
+
+To execute the script, you can run the following command in the terminal:
+
+```
+./myscript.sh
+
+```
+
+This will run the script and print "Hello, World!" to the console.
+
+## Passing Arguments to a Bash Script
+
+You can pass arguments to a Bash script by using the `$1`, `$2`, `$3`, etc. variables. These variables represent the first, second, and third arguments passed to the script, respectively. Here's an example of a script that takes two arguments and prints them to the console:
+
+```
+#!/bin/bash
+echo "The first argument is $1"
+echo "The second argument is $2"
+
+```
+
+To run this script with arguments, you can run the following command in the terminal:
+
+```
+./myscript.sh arg1 arg2
+
+```
+
+This will print the following to the console:
+
+```
+The first argument is arg1
+The second argument is arg2
+
+```
+
+## Conditional Statements in Bash Scripts
+
+Bash scripts support conditional statements to make decisions based on certain conditions. Here's an example of a script that checks if a file exists and prints a message accordingly:
+
+```
+#!/bin/bash
+if [ -f myfile.txt ]; then
+    echo "myfile.txt exists"
+else
+    echo "myfile.txt does not exist"
+fi
+
+```
+
+In this script, the `-f` option checks if `myfile.txt` exists. If it does, the script prints "myfile.txt exists". Otherwise, it prints "myfile.txt does not exist".
+
+## Loops in Bash Scripts
+
+Bash scripts also support loops to perform repetitive tasks. Here's an example of a script that prints the numbers 1 to 10 to the console using a `for` loop:
+
+```
+#!/bin/bash
+for i in {1..10}; do
+    echo $i
+done
+
+```
+
+In this script, the `for` loop iterates over the numbers 1 through 10 and prints each number to the console using the `echo` command.
+
+## Conclusion
+
+These are just some of the basic concepts of Bash scripting. By mastering these concepts, you can create powerful scripts that can automate various tasks and simplify your workflow. With Bash scripting, you can save time and automate repetitive tasks, making your life as a developer or system administrator much easier.
+
+Examples : 
+
+### Bash Script 1: Hello World
+
+```
+#!/bin/bash
+echo "Hello, World!"
+
+```
+
+This is a simple script that prints "Hello, World!" to the console. The `echo` command is used to print the message to the console.
+
+### Bash Script 2: Command Line Arguments
+
+```
+#!/bin/bash
+echo "The first argument is $1"
+echo "The second argument is $2"
+
+```
+
+This script takes two command line arguments and prints them to the console.
+
+### Bash Script 3: Conditional Statements
+
+```
+#!/bin/bash
+if [ -f myfile.txt ]; then
+    echo "myfile.txt exists"
+else
+    echo "myfile.txt does not exist"
+fi
+
+```
+
+This script checks if a file named `myfile.txt` exists and prints a message accordingly.
+
+### Bash Script 4: For Loops
+
+```
+#!/bin/bash
+for i in {1..10}; do
+    echo $i
+done
+
+```
+
+This script uses a `for` loop to iterate over the numbers 1 through 10 and print each number to the console.
+
+### Bash Script 5: While Loops
+
+```
+#!/bin/bash
+count=1
+while [ $count -le 10 ]; do
+    echo $count
+    count=$((count+1))
+done
+
+```
+
+This script uses a `while` loop to print the numbers 1 through 10 to the console.
+
+### Bash Script 6: Functions
+
+```
+#!/bin/bash
+function say_hello {
+    echo "Hello, $1"
+}
+
+say_hello "John"
+
+```
+
+This script defines a function called `say_hello` that takes one argument and prints "Hello, [name]" to the console.
+
+### Bash Script 7: Arrays
+
+```
+#!/bin/bash
+my_array=("apple" "banana" "cherry")
+echo ${my_array[1]}
+
+```
+
+This script creates an array called `my_array` containing three elements. It then prints the second element of the array to the console (`banana`).
+
+### Bash Script 8: Reading Input
+
+```
+#!/bin/bash
+echo "What is your name?"
+read name
+echo "Hello, $name"
+
+```
+
+This script prompts the user to enter their name and then prints "Hello, [name]" to the console.
+
+### Bash Script 9: Redirecting Output
+
+```
+#!/bin/bash
+echo "Hello, World!" > output.txt
+
+```
+
+This script redirects the output of the `echo` command to a file called `output.txt`.
+
+### Bash Script 10: Pipes
+
+```
+#!/bin/bash
+ls | grep ".txt"
+
+```
+
+This script uses a pipe to pass the output of the `ls` command to the `grep` command, which filters the results to only show files with a `.txt` extension.
+
+### Bash Script 11: Variables
+
+```
+#!/bin/bash
+name="John"
+echo "My name is $name"
+
+```
+
+This script defines a variable called `name` and then prints the value of the variable to the console.
+
+### Bash Script 12: Mathematical Operations
+
+```
+#!/bin/bash
+num1=5
+num2=10
+result=$((num1+num2))
+echo "The result is $result"
+
+```
+
+This script performs a simple addition operation and prints the result to the console.
+
+### Bash Script 13: If Statements
+
+```
+#!/bin/bash
+if [ $1 -gt 10 ]; then
+    echo "The number is greater than 10"
+else
+    echo "The number is less than or equal to 10"
+fi
+
+```
+
+This script uses an `if` statement to check if the first command line argument is greater than 10 and prints a message accordingly.
+
+### Bash Script 14: Case Statements
+
+```
+#!/bin/bash
+case $1 in
+    "apple") echo "This is a fruit";;
+    "carrot") echo "This is a vegetable";;
+    *) echo "Unknown item";;
+esac
+
+```
+
+This script uses a `case` statement to check the value of the first command line argument and prints a message accordingly.
+
+### Bash Script 15: Exit Codes
+
+```
+#!/bin/bash
+ls
+if [ $? -eq 0 ]; then
+    echo "The command was successful"
+else
+    echo "The command failed"
+fi
+
+```
+
+This script uses the `$?` variable to check the exit code of the `ls` command and prints a message accordingly.
+
+### Bash Script 16: File Operations
+
+```
+#!/bin/bash
+touch myfile.txt
+echo "Hello, World!" > myfile.txt
+cat myfile.txt
+
+```
+
+This script creates a file called `myfile.txt`, writes "Hello, World!" to the file, and then prints the contents of the file to the console.
+
+### Bash Script 17: Environment Variables
+
+```
+#!/bin/bash
+echo "Your username is $USER"
+echo "Your home directory is $HOME"
+
+```
+
+This script uses the `$USER` and `$HOME` environment variables to print the username and home directory of the current user.
+
+### Bash Script 18: Date and Time
+
+```
+#!/bin/bash
+echo "The current date is $(date +%Y-%m-%d)"
+echo "The current time is $(date +%H:%M:%S)"
+
+```
+
+This script uses the `date` command to print the current date and time in a specific format.
+
+### Bash Script 19: Input Validation
+
+```
+#!/bin/bash
+if [ -z $1 ]; then
+    echo "Please enter a command line argument"
+    exit 1
+fi
+echo "The argument is $1"
+
+```
+
+This script checks if a command line argument was provided and prints the argument to the console if one was provided. If no argument was provided, it prints a message and exits with an error code.
+
+### Bash Script 20: File Permissions
+
+```
+#!/bin/bash
+chmod 755 myfile.txt
+
+```
+
+This script sets the file permissions of `myfile.txt` to `755`.
+
+### Bash Script 21: String Operations
+
+```
+#!/bin/bash
+string="Hello, World!"
+echo ${string:0:5}
+
+```
+
+This script uses string manipulation to print the first 5 characters of the string "Hello, World!" to the console.
+
+### Bash Script 22: Random Numbers
+
+```
+#!/bin/bash
+echo $((RANDOM % 10))
+
+```
+
+This script generates a random number between 0 and 9 and prints it to the console.
+
+### Bash Script 23: Command Substitution
+
+```
+#!/bin/bash
+echo "There are $(ls | wc -l) files in this directory"
+
+```
+
+This script uses command substitution to count the number of files in the current directory and prints the count to the console.
+
+### Bash Script 24: Exit Command
+
+```
+#!/bin/bash
+echo "Hello, World!"
+exit 1
+
+```
+
+This script prints "Hello, World!" to the console and exits with an error code of 1.
+
+### Bash Script 25: Debugging
+
+```
+#!/bin/bash -x
+name="John"
+echo "My name is $name"
+
+```
+
+This script uses the `-x` option to enable debugging mode, which prints each command and its output to the console as it is executed.
+
+### Bash Script 26: Input from File
+
+```
+#!/bin/bash
+while read line; do
+    echo $line
+done < myfile.txt
+
+```
+
+This script reads input from a file called `myfile.txt` and prints each line to the console.
+
+### Bash Script 27: Output to File
+
+```
+#!/bin/bash
+echo "Hello, World!" > output.txt
+
+```
+
+This script redirects the output of the `echo` command to a file called `output.txt`.
+
+### Bash Script 28: Input from User
+
+```
+#!/bin/bash
+read -p "What is your name?" name
+echo "Hello, $name"
+
+```
+
+This script prompts the user to enter their name and then prints "Hello, [name]" to the console.
+
+### Bash Script 29: Here Documents
+
+```
+#!/bin/bash
+cat << EOF
+<html>
+<head>
+<title>My Page</title>
+</head>
+<body>
+<h1>Hello, World!</h1>
+</body>
+</html>
+EOF
+
+```
+
+This script uses a here document to output HTML code to the console.
+
+### Bash Script 30: Temporary Files
+
+```
+#!/bin/bash
+tempfile=$(mktemp)
+echo "This is a temporary file" > $tempfile
+cat $tempfile
+rm $tempfile
+
+```
+
+This script creates a temporary file, writes a message to the file, reads the contents of the file, and then deletes the file.
+
+## Conclusion
+
+These are just some of the basic concepts of Bash scripting. By mastering these concepts, you can create powerful scripts that can automate various tasks and simplify your workflow. With Bash scripting, you can save time and automate repetitive tasks, making your life as a developer or system administrator much easier.
+
+# Examples:
+
+### Bash Script 1: Hello World
+
+```
+#!/bin/bash
+echo "Hello, World!"
+
+```
+
+This is a simple script that prints "Hello, World!" to the console. The `echo` command is used to print the message to the console.
+
+### Bash Script 2: Command Line Arguments
+
+```
+#!/bin/bash
+echo "The first argument is $1"
+echo "The second argument is $2"
+
+```
+
+This script takes two command line arguments and prints them to the console.
+
+### Bash Script 3: Conditional Statements
+
+```
+#!/bin/bash
+if [ -f myfile.txt ]; then
+    echo "myfile.txt exists"
+else
+    echo "myfile.txt does not exist"
+fi
+
+```
+
+This script checks if a file named `myfile.txt` exists and prints a message accordingly.
+
+### Bash Script 4: For Loops
+
+```
+#!/bin/bash
+for i in {1..10}; do
+    echo $i
+done
+
+```
+
+This script uses a `for` loop to iterate over the numbers 1 through 10 and print each number to the console.
+
+### Bash Script 5: While Loops
+
+```
+#!/bin/bash
+count=1
+while [ $count -le 10 ]; do
+    echo $count
+    count=$((count+1))
+done
+
+```
+
+This script uses a `while` loop to print the numbers 1 through 10 to the console.
+
+### Bash Script 6: Functions
+
+```
+#!/bin/bash
+function say_hello {
+    echo "Hello, $1"
+}
+
+say_hello "John"
+
+```
+
+This script defines a function called `say_hello` that takes one argument and prints "Hello, [name]" to the console.
+
+### Bash Script 7: Arrays
+
+```
+#!/bin/bash
+my_array=("apple" "banana" "cherry")
+echo ${my_array[1]}
+
+```
+
+This script creates an array called `my_array` containing three elements. It then prints the second element of the array to the console (`banana`).
+
+### Bash Script 8: Reading Input
+
+```
+#!/bin/bash
+echo "What is your name?"
+read name
+echo "Hello, $name"
+
+```
+
+This script prompts the user to enter their name and then prints "Hello, [name]" to the console.
+
+### Bash Script 9: Redirecting Output
+
+```
+#!/bin/bash
+echo "Hello, World!" > output.txt
+
+```
+
+This script redirects the output of the `echo` command to a file called `output.txt`.
+
+### Bash Script 10: Pipes
+
+```
+#!/bin/bash
+ls | grep ".txt"
+
+```
+
+This script uses a pipe to pass the output of the `ls` command to the `grep` command, which filters the results to only show files with a `.txt` extension.
+
+### Bash Script 11: Variables
+
+```
+#!/bin/bash
+name="John"
+echo "My name is $name"
+
+```
+
+This script defines a variable called `name` and then prints the value of the variable to the console.
+
+### Bash Script 12: Mathematical Operations
+
+```
+#!/bin/bash
+num1=5
+num2=10
+result=$((num1+num2))
+echo "The result is $result"
+
+```
+
+This script performs a simple addition operation and prints the result to the console.
+
+### Bash Script 13: If Statements
+
+```
+#!/bin/bash
+if [ $1 -gt 10 ]; then
+    echo "The number is greater than 10"
+else
+    echo "The number is less than or equal to 10"
+fi
+
+```
+
+This script uses an `if` statement to check if the first command line argument is greater than 10 and prints a message accordingly.
+
+### Bash Script 14: Case Statements
+
+```
+#!/bin/bash
+case $1 in
+    "apple") echo "This is a fruit";;
+    "carrot") echo "This is a vegetable";;
+    *) echo "Unknown item";;
+esac
+
+```
+
+This script uses a `case` statement to check the value of the first command line argument and prints a message accordingly.
+
+### Bash Script 15: Exit Codes
+
+```
+#!/bin/bash
+ls
+if [ $? -eq 0 ]; then
+    echo "The command was successful"
+else
+    echo "The command failed"
+fi
+
+```
+
+This script uses the `$?` variable to check the exit code of the `ls` command and prints a message accordingly.
+
+### Bash Script 16: File Operations
+
+```
+#!/bin/bash
+touch myfile.txt
+echo "Hello, World!" > myfile.txt
+cat myfile.txt
+
+```
+
+This script creates a file called `myfile.txt`, writes "Hello, World!" to the file, and then prints the contents of the file to the console.
+
+### Bash Script 17: Environment Variables
+
+```
+#!/bin/bash
+echo "Your username is $USER"
+echo "Your home directory is $HOME"
+
+```
+
+This script uses the `$USER` and `$HOME` environment variables to print the username and home directory of the current user.
+
+### Bash Script 18: Date and Time
+
+```
+#!/bin/bash
+echo "The current date is $(date +%Y-%m-%d)"
+echo "The current time is $(date +%H:%M:%S)"
+
+```
+
+This script uses the `date` command to print the current date and time in a specific format.
+
+### Bash Script 19: Input Validation
+
+```
+#!/bin/bash
+if [ -z $1 ]; then
+    echo "Please enter a command line argument"
+    exit 1
+fi
+echo "The argument is $1"
+
+```
+
+This script checks if a command line argument was provided and prints the argument to the console if one was provided. If no argument was provided, it prints a message and exits with an error code.
+
+### Bash Script 20: File Permissions
+
+```
+#!/bin/bash
+chmod 755 myfile.txt
+
+```
+
+This script sets the file permissions of `myfile.txt` to `755`.
+
+### Bash Script 21: String Operations
+
+```
+#!/bin/bash
+string="Hello, World!"
+echo ${string:0:5}
+
+```
+
+This script uses string manipulation to print the first 5 characters of the string "Hello, World!" to the console.
+
+### Bash Script 22: Random Numbers
+
+```
+#!/bin/bash
+echo $((RANDOM % 10))
+
+```
+
+This script generates a random number between 0 and 9 and prints it to the console.
+
+### Bash Script 23: Command Substitution
+
+```
+#!/bin/bash
+echo "There are $(ls | wc -l) files in this directory"
+
+```
+
+This script uses command substitution to count the number of files in the current directory and prints the count to the console.
+
+### Bash Script 24: Exit Command
+
+```
+#!/bin/bash
+echo "Hello, World!"
+exit 1
+
+```
+
+This script prints "Hello, World!" to the console and exits with an error code of 1.
+
+### Bash Script 25: Debugging
+
+```
+#!/bin/bash -x
+name="John"
+echo "My name is $name"
+
+```
+
+This script uses the `-x` option to enable debugging mode, which prints each command and its output to the console as it is executed.
+
+### Bash Script 26: Input from File
+
+```
+#!/bin/bash
+while read line; do
+    echo $line
+done < myfile.txt
+
+```
+
+This script reads input from a file called `myfile.txt` and prints each line to the console.
+
+### Bash Script 27: Output to File
+
+```
+#!/bin/bash
+echo "Hello, World!" > output.txt
+
+```
+
+This script redirects the output of the `echo` command to a file called `output.txt`.
+
+### Bash Script 28: Input from User
+
+```
+#!/bin/bash
+read -p "What is your name?" name
+echo "Hello, $name"
+
+```
+
+This script prompts the user to enter their name and then prints "Hello, [name]" to the console.
+
+### Bash Script 29: Here Documents
+
+```
+#!/bin/bash
+cat << EOF
+<html>
+<head>
+<title>My Page</title>
+</head>
+<body>
+<h1>Hello, World!</h1>
+</body>
+</html>
+EOF
+
+```
+
+This script uses a here document to output HTML code to the console.
+
+### Bash Script 30: Temporary Files
+
+```
+#!/bin/bash
+tempfile=$(mktemp)
+echo "This is a temporary file" > $tempfile
+cat $tempfile
+rm $tempfile
+
+```
+
+This script creates a temporary file, writes a message to the file, reads the contents of the file, and then deletes the file.
